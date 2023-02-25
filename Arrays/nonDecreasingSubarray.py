@@ -27,7 +27,7 @@ class Solution:
                 prefix_array.append(1)
         psum = [0]*N
         for i in range(1,N):
-            psum[i] = psum[i-1] + prefix_array[i-1]
+            psum[i] = psum[i-1] + prefix_array[i]
         for L,R in B:
             if psum[R] - psum[L-1] >= 1:
                 print("{0}-{1}--> False".format(L,R))
